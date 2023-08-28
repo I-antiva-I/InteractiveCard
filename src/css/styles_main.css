@@ -1,0 +1,423 @@
+*, *::after, *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+
+body, #root, .application
+{
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: var(--font-size-default);
+}
+
+
+.wrapper
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.wrapper.for-card-display
+{
+    background-image: url(/src/images/bg_mobile.png);
+    background-size: cover;
+
+    padding-top: 2rem;
+}
+.wrapper.for-card-form
+.wrapper.for-card-success
+{
+    padding-bottom: 2rem;
+}
+
+
+.card-form,
+.card-display,
+.card-success
+{
+    width:  var(--width-mobile);
+    max-width: var(--width-mobile);
+}
+
+.card-form
+{   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 0.5rem;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-top: 4rem;
+    padding: 0 1.25rem;
+}
+
+.card-success
+{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1
+{
+    font-size: 2em;
+    margin: 2rem 0 0.75rem;
+    letter-spacing: 2px;
+}
+h2
+{
+    font-size: 1em;
+    margin-bottom: 2.5rem;
+    color: var(--color-dark-grayish-violet);
+}
+
+
+.input-group
+{
+    display: flex;
+    flex-direction: column;
+}
+.input-group label
+{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    padding: 0.125rem 0rem;
+    letter-spacing: 1px;
+
+
+}
+.input-group label.status
+{
+    text-transform: none;
+    letter-spacing: 0px;
+}
+
+
+.input-group label.status.input-info-empty,
+.input-group label.status.input-info-invalid,
+.input-group label.status.input-info-expired
+{
+    color: var(--color-red);
+}
+
+
+.wrapper.for-input-field
+{
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
+
+    border-radius: 4px;
+    overflow: hidden;
+}
+.input-field 
+{
+    width: 100%;
+
+    border: 2px solid var(--color-light-grayish-violet);
+    outline: none;
+
+    border-radius:  4px;
+    padding:        0.375rem 0.5rem;
+    font-size:      var(--font-size-default);
+
+    overflow:       hidden;
+    
+}
+
+.input-state-empty,
+.input-state-invalid,
+.input-state-expired
+{
+    border-color: var(--color-red);
+}
+.input-state-valid
+{
+    border-color: var(--color-green);
+}
+input:focus
+{
+    border-image:
+        linear-gradient(var(--color-gradient-start), var(--color-gradient-end)) 1;
+}
+
+
+
+
+
+
+
+
+
+.input-group.group-card-name
+{
+    grid-column: auto / span 2;
+}
+.input-group.group-card-number
+{
+    grid-column: auto / span 2;
+}
+.input-group.group-card-date
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 0.25rem;
+
+
+}
+.input-group.group-card-date label
+{
+    grid-column: auto / span 2;
+}
+#submit-button,
+#continue-button
+{
+    border: none;
+    color: var(--color-white);
+    border: 3px solid  var(--color-very-dark-violet); ;
+    background-color: var(--color-very-dark-violet);
+    font-size:      var(--font-size-default);
+    border-radius: 8px;
+    padding: 0.75rem 0;
+    cursor: pointer;
+}
+#submit-button
+{
+    grid-column: auto / span 2;
+}
+#continue-button
+{
+    width: 100%;
+}
+#submit-button:hover,
+#continue-button:hover
+{
+    border: 3px solid  var(--color-very-dark-violet); ;
+    color:  var(--color-very-dark-violet);;
+    background-color: var(--color-white);
+}
+
+
+
+.card-display
+{
+    padding: 0rem 1rem;
+
+    height: 200px;
+
+
+}
+
+.card-back,
+.card-face
+{
+    position: relative;
+
+    width:      90%;
+
+    aspect-ratio: 447/245;
+    
+    display: flex;
+    flex-direction: column;
+
+
+
+    background-size: contain;
+
+    color: var(--color-white);
+    border-radius: 8px;
+}
+
+.card-info
+{
+    display: flex;
+    width: fit-content;
+}
+
+
+
+.card-face
+{
+    background-image: url(/src/images/card_face.png);
+    padding: 1rem;
+    position: relative;
+    top: -55px;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
+}
+#logo
+{
+    width: 2.75rem;
+    margin-bottom: 2rem;
+}
+.card-info.group-nd
+{
+    margin-top: 0.5rem;
+    display: flex;
+    width: 100%;
+}
+.card-info.card-number
+{
+    display: flex;
+}
+.card-info.card-date
+{
+    margin-left: auto;
+}
+.card-info.card-name,
+.card-info.card-date
+{
+    font-size: 0.75em;
+}
+
+
+
+.card-back
+{
+    background-image: url(/src/images/card_back.png);
+    left: 10%;
+
+}
+.card-info.card-cvc
+{
+    position: relative;
+    left: 78%;
+    top: 43%;
+
+    font-size: 0.75em;
+}
+
+
+
+/* ARROWS */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] 
+{
+  -moz-appearance: textfield;
+}
+
+
+
+/* MEDIA */
+
+
+@media screen and (min-width: 1200px) 
+{
+    
+    .application
+    {
+        flex-direction: row;
+    }
+
+
+    .wrapper.for-card-display
+    {
+        background-image: url(/src/images/bg_desktop.png);
+        background-size: cover;
+        min-height: 100vh;
+        padding: 0rem;
+        max-width: 33%;
+    }
+    .wrapper.for-card-form
+    .wrapper.for-card-success
+    {
+        min-height: 100vh;
+        padding: 0rem;
+    }
+
+    .card-display
+    {
+        padding: 0;
+        height: auto;
+        flex-direction: column-reverse;
+
+    }
+
+    .card-back,
+    .card-face
+    {
+        position: relative;
+        width:      447px;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.25) 10px 0px 20px;
+    }
+
+    .card-face
+    {
+        top: -270px;
+        left: 50px;
+        padding: 1.25rem;
+    }
+    #logo
+    {
+        width: 5rem;
+        margin-bottom: 4rem;
+    }
+    .card-info.group-nd
+    {
+        margin-top: 2rem;
+        padding: 0 1rem;
+        display: flex;
+        width: auto;
+    }
+    .card-info.card-number
+    {
+        display: flex;
+        font-size: 1.375em;
+        letter-spacing: 4px;
+        margin: 0 1rem;
+    }
+    .card-info.card-date
+    {
+        margin-left: auto;
+    }
+    .card-info.card-name,
+    .card-info.card-date
+    {
+        font-size: 1em;
+        letter-spacing: 2px;
+    }
+
+    .card-back
+    {
+        top: 270px;
+        left: 135px;
+    }
+    .card-info.card-cvc
+    {
+        position: relative;
+        left: 78%;
+        top: 45%;
+    
+        font-size: 1em;
+    }
+    
+
+
+
+}
