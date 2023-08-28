@@ -326,7 +326,7 @@ input[type=number]
 /* MEDIA */
 
 
-@media screen and (min-width: 1200px) 
+@media screen and (min-width: 1400px) 
 {
     
     .application
@@ -348,6 +348,14 @@ input[type=number]
     {
         min-height: 100vh;
         padding: 0rem;
+    }
+
+    .card-form,
+    .card-success
+    {
+        width:  var(--width-desktop);
+        max-width: var(--width-desktop);
+        padding: 0 4rem;
     }
 
     .card-display

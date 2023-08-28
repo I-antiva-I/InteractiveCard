@@ -2,7 +2,7 @@
 :root
 {
     --width-mobile:     325px;
-    --width-desktop:    900px;
+    --width-desktop:    650px;
 
     --color-gradient-start:         hsl(249, 99%, 64%);
     --color-gradient-end:           hsl(278, 94%, 30%);
